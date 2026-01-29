@@ -44,8 +44,81 @@ resources:
       - name: Newtest_1769519808646_perf!localhost.rstats
         type: com.ibm.rational.test.lt.stats.raw
       - name: Newtest_1769519809004.executiondlr
+      - name: Newtest_1769703586750.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1769703586750
+          tags: 
+          testId: A1F0FB823CBEE8B0C32BB36165646238
+          testName: Newtest
+        dependencies: 
+          - path: /NewprojectSample/Results/Newtest_1769703586750_orch!system.mstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703586750_orch!system.rstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703586750_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703586750_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703591750.executiondlr
+            type: statsSessionAsset
+          - path: /NewprojectSample/Tests/Newtest.testsuite
+            type: statsSessionTest
+      - name: Newtest_1769703586750_orch!system.mstats
+      - name: Newtest_1769703586750_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Newtest_1769703586750_perf!localhost.mstats
+      - name: Newtest_1769703586750_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Newtest_1769703591750.executiondlr
+      - name: Newtest_1769703842738.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1769703842738
+          tags: 
+          testId: A1F0FB823CBEE8B0C32BB36165646238
+          testName: Newtest
+        dependencies: 
+          - path: /NewprojectSample/Results/Newtest_1769703842738_orch!system.mstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703842738_orch!system.rstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703842738_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703842738_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /NewprojectSample/Results/Newtest_1769703843167.executiondlr
+            type: statsSessionAsset
+          - path: /NewprojectSample/Tests/Newtest.testsuite
+            type: statsSessionTest
+      - name: Newtest_1769703842738_orch!system.mstats
+      - name: Newtest_1769703842738_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Newtest_1769703842738_perf!localhost.mstats
+      - name: Newtest_1769703842738_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Newtest_1769703843167.executiondlr
   - name: Schedules
     resources: 
+      - name: SH-Newtest.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	users=10; duration=5 minutes
+
+User Group 1: Group Size 100.0 percent
+
+	Test(s): Newtest
+
+'
+          name: SH-Newtest
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1F0FD2C760BF990CAAAE36163646138
+        dependencies: 
+          - path: /NewprojectSample/Tests/Newtest.testsuite
+            type: scheduleInvokedTest
   - name: Tests
     resources: 
       - name: Newtest.recdata
