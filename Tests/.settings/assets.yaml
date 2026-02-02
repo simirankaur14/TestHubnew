@@ -1,0 +1,20 @@
+name: Myxaapp_Tests
+projectReferences: 
+  - /Myxaapp
+resources: 
+  - name: Login.recdata
+  - name: Login.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Myxaapp_Tests/Login.recdata
+        type: recsessionRecdata
+  - name: Login.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F100248DD2EF70EA35B23837383631
+    dependencies: 
+      - path: /Myxaapp/Tests/Login.recsession
+        type: testRecsession

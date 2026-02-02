@@ -1,0 +1,231 @@
+name: Myxaapp
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Myxaapp/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+  - name: Datasets
+    resources: 
+  - name: 'JMeter Tests'
+    resources: 
+  - name: Locations
+    resources: 
+  - name: Login.recdata
+  - name: Login.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Myxaapp/Login.recdata
+        type: recsessionRecdata
+  - name: Login.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F10029B6C32EE0D8E4B73564616536
+    dependencies: 
+      - path: /Myxaapp/Login.recsession
+        type: testRecsession
+  - name: Results
+    resources: 
+      - name: Login_10_1770037967780.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1770037967780
+          tags: 
+          testId: A1F10038A0D8FE20DE97B93133663965
+          testName: Login_10
+        dependencies: 
+          - path: /Myxaapp/Results/Login_10_1770037967780_orch!system.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_10_1770037967780_orch!system.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_10_1770037967780_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_10_1770037967780_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_10_1770037970458.executiondlr
+            type: statsSessionAsset
+          - path: /Myxaapp/Schedules/Login_10.testsuite
+            type: statsSessionTest
+      - name: Login_10_1770037967780_orch!system.mstats
+      - name: Login_10_1770037967780_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_10_1770037967780_perf!localhost.mstats
+      - name: Login_10_1770037967780_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_10_1770037970458.executiondlr
+      - name: Login_1770029418345.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1770029418345
+          tags: 
+          testId: A1F100248DD2EF70EA35B23837383631
+          testName: Login
+        dependencies: 
+          - path: /Myxaapp/Results/Login_1770029418345_orch!system.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770029418345_orch!system.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770029418345_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770029418345_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770029424351.executiondlr
+            type: statsSessionAsset
+          - path: /Myxaapp/Tests/Login.testsuite
+            type: statsSessionTest
+      - name: Login_1770029418345_orch!system.mstats
+      - name: Login_1770029418345_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_1770029418345_perf!localhost.mstats
+      - name: Login_1770029418345_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_1770029424351.executiondlr
+      - name: Login_1770037604168.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1770037604168
+          tags: 
+          testId: A1F10029B6C32EE0D8E4B73564616536
+          testName: Login
+        dependencies: 
+          - path: /Myxaapp/Login.testsuite
+            type: statsSessionTest
+          - path: /Myxaapp/Results/Login_1770037604168_orch!system.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770037604168_orch!system.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770037604168_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770037604168_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_1770037606000.executiondlr
+            type: statsSessionAsset
+      - name: Login_1770037604168_orch!system.mstats
+      - name: Login_1770037604168_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_1770037604168_perf!localhost.mstats
+      - name: Login_1770037604168_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_1770037606000.executiondlr
+      - name: Login_5_1770038321395.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1770038321395
+          tags: 
+          testId: A1F10039954B9350DE97B93133663965
+          testName: Login_5
+        dependencies: 
+          - path: /Myxaapp/Results/Login_5_1770038321395_orch!system.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_5_1770038321395_orch!system.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_5_1770038321395_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_5_1770038321395_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Myxaapp/Results/Login_5_1770038322694.executiondlr
+            type: statsSessionAsset
+          - path: /Myxaapp/Schedules/Login_5.testsuite
+            type: statsSessionTest
+      - name: Login_5_1770038321395_orch!system.mstats
+      - name: Login_5_1770038321395_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_5_1770038321395_perf!localhost.mstats
+      - name: Login_5_1770038321395_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: Login_5_1770038322694.executiondlr
+  - name: Schedules
+    resources: 
+      - name: Login_10.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	users=10; duration=Run Until Finished
+
+Login10: Group Size 10.0 users
+
+	Test(s): Login
+
+'
+          name: Login_10
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1F10038A0D8FE20DE97B93133663965
+        dependencies: 
+          - path: /Myxaapp/Login.testsuite
+            type: scheduleInvokedTest
+      - name: Login_5.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	users=5; duration=Run Until Finished
+
+Login5: Group Size 5.0 users
+
+	Test(s): Login
+
+'
+          name: Login_5
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1F10039954B9350DE97B93133663965
+        dependencies: 
+          - path: /Myxaapp/Login.testsuite
+            type: scheduleInvokedTest
+  - name: Tests
+    resources: 
+      - name: Dashboard.recdata
+      - name: Dashboard.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Myxaapp/Tests/Dashboard.recdata
+            type: recsessionRecdata
+      - name: Dashboard1.recdata
+      - name: Dashboard1.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Myxaapp/Tests/Dashboard1.recdata
+            type: recsessionRecdata
+      - name: DashboardAccess.recdata
+      - name: DashboardAccess.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Myxaapp/Tests/DashboardAccess.recdata
+            type: recsessionRecdata
+      - name: Login.recdata
+      - name: Login.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Myxaapp/Tests/Login.recdata
+            type: recsessionRecdata
+      - name: Login.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1F100248DD2EF70EA35B23837383631
+        dependencies: 
+          - path: /Myxaapp/Tests/Login.recsession
+            type: testRecsession
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: Login_10_Schedule_A1F10038A0D8FE20DE97B93133663965.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Login_5_Schedule_A1F10039954B9350DE97B93133663965.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Login_Test_A1F100248DD2EF70EA35B23837383631.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Login_Test_A1F10029B6C32EE0D8E4B73564616536.java
+            type: com.ibm.rational.test.lt.generatedCode
